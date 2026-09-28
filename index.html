@@ -17,6 +17,15 @@
     .anchor{position:absolute;left:0;width:1px;height:1px;pointer-events:none;transform:translateY(-18px)}
     .skip{position:absolute;left:-9999px}
     .skip:focus{left:12px;top:12px;z-index:20;background:#fff;color:#000;padding:10px 14px;line-height:1.2}
+  
+    .faq-modal{border:1px solid rgba(108,190,173,.6);border-radius:18px;padding:0;max-width:620px;width:calc(100% - 32px);background:#222;color:#fff;box-shadow:0 24px 80px rgba(0,0,0,.55);line-height:1.45}
+    .faq-modal::backdrop{background:rgba(0,0,0,.72);backdrop-filter:blur(3px)}
+    .faq-modal__inner{position:relative;padding:30px 30px 28px}
+    .faq-modal__question{margin:0 42px 14px 0;font-size:22px;line-height:1.2;font-weight:800;text-transform:uppercase}
+    .faq-modal__answer{margin:0;font-size:17px;line-height:1.55;color:#f2f2f2}
+    .faq-modal__close{position:absolute;right:16px;top:14px;width:38px;height:38px;border:0;border-radius:50%;background:#62b7a6;color:#111;font-size:25px;line-height:38px;cursor:pointer}
+    @media(max-width:600px){.faq-modal__inner{padding:24px 20px 22px}.faq-modal__question{font-size:18px}.faq-modal__answer{font-size:15px}}
+
   </style>
 </head>
 <body>
@@ -52,14 +61,63 @@
     <a class="hotspot" href="#contact" aria-label="Купить онлайн обучение" style="left:31.9%;top:68.74%;width:36.1%;height:0.98%"></a>
     <a class="hotspot" href="#contact" aria-label="Купить оффлайн обучение" style="left:32.0%;top:75.11%;width:36.0%;height:0.98%"></a>
 
-    <!-- Плюсы FAQ: переводят к форме связи, т.к. текст раскрывающихся ответов отсутствует в PDF -->
-    <a class="hotspot" href="#contact" aria-label="Задать вопрос: нужна ли медицинская лицензия" style="left:75.3%;top:87.23%;width:3.9%;height:0.68%"></a>
-    <a class="hotspot" href="#contact" aria-label="Задать вопрос: обслуживание оборудования" style="left:75.3%;top:88.42%;width:3.9%;height:0.68%"></a>
-    <a class="hotspot" href="#contact" aria-label="Задать вопрос: гарантия на оборудование" style="left:75.3%;top:89.60%;width:3.9%;height:0.68%"></a>
-    <a class="hotspot" href="#contact" aria-label="Задать вопрос: регистрация ИП или ООО" style="left:75.3%;top:90.78%;width:3.9%;height:0.68%"></a>
+    <!-- FAQ: ответы открываются по нажатию на плюс -->
+    <button class="hotspot faq-open" type="button" data-faq="0" aria-label="Открыть ответ: нужна ли медицинская лицензия" style="left:75.3%;top:87.23%;width:3.9%;height:0.68%;border:0;padding:0"></button>
+    <button class="hotspot faq-open" type="button" data-faq="1" aria-label="Открыть ответ: обслуживание оборудования" style="left:75.3%;top:88.42%;width:3.9%;height:0.68%;border:0;padding:0"></button>
+    <button class="hotspot faq-open" type="button" data-faq="2" aria-label="Открыть ответ: гарантия на оборудование" style="left:75.3%;top:89.60%;width:3.9%;height:0.68%;border:0;padding:0"></button>
+    <button class="hotspot faq-open" type="button" data-faq="3" aria-label="Открыть ответ: регистрация ИП или ООО" style="left:75.3%;top:90.78%;width:3.9%;height:0.68%;border:0;padding:0"></button>
 
     <!-- Нижняя кнопка визуально сохранена как в исходнике. Ссылка назначения в PDF не содержится. -->
     <a class="hotspot" href="#contact" aria-label="Свяжись со мной" style="left:56.7%;top:96.94%;width:17.2%;height:0.68%"></a>
   </main>
+
+  <dialog id="faqDialog" class="faq-modal">
+    <div class="faq-modal__inner">
+      <button class="faq-modal__close" type="button" aria-label="Закрыть">×</button>
+      <h3 id="faqQuestion" class="faq-modal__question"></h3>
+      <p id="faqAnswer" class="faq-modal__answer"></p>
+    </div>
+  </dialog>
+
+  <script>
+    const faqItems = [
+      {
+        q: 'Нужна ли медицинская лицензия для оказания услуг?',
+        a: 'Для представленных на сайте процедур медицинская лицензия не требуется.'
+      },
+      {
+        q: 'Как обслуживается оборудование в процессе эксплуатации?',
+        a: 'По вопросам обслуживания и эксплуатации оборудования можно обратиться к нам. Подскажем по конкретной ситуации и поможем с рекомендациями по работе с аппаратом.'
+      },
+      {
+        q: 'Какая гарантия предоставляется на оборудование?',
+        a: 'На аппарат предоставляется гарантия 1 год.'
+      },
+      {
+        q: 'Нужно ли регистрировать ИП/ООО для начала работы?',
+        a: 'Перед началом работы необходимо выбрать подходящую форму оформления деятельности. Напишите нам — подскажем, какой вариант подойдет в вашей ситуации.'
+      }
+    ];
+
+    const faqDialog = document.getElementById('faqDialog');
+    const faqQuestion = document.getElementById('faqQuestion');
+    const faqAnswer = document.getElementById('faqAnswer');
+
+    document.querySelectorAll('.faq-open').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = faqItems[Number(btn.dataset.faq)];
+        faqQuestion.textContent = item.q;
+        faqAnswer.textContent = item.a;
+        faqDialog.showModal();
+      });
+    });
+
+    faqDialog.querySelector('.faq-modal__close').addEventListener('click', () => faqDialog.close());
+    faqDialog.addEventListener('click', (e) => {
+      const r = faqDialog.getBoundingClientRect();
+      if (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) faqDialog.close();
+    });
+  </script>
+
 </body>
 </html>
