@@ -42,9 +42,9 @@
     .btn.primary{background:linear-gradient(90deg,var(--accent),var(--accent2));color:#102321}
     .btn.ghost{border:1px solid var(--accent);color:var(--accent2);background:rgba(0,0,0,.22)}
     .btn + .btn{margin-top:10px}
-    .hero{position:relative;min-height:0;padding:330px 20px 30px;display:block;isolation:isolate;background:#151515}
-    .hero:before{content:"";position:absolute;left:0;right:0;top:0;height:350px;z-index:-2;background-image:url("assets/site.jpg");background-repeat:no-repeat;background-size:315% auto;background-position:109% 0}
-    .hero:after{content:"";position:absolute;left:0;right:0;top:0;height:350px;z-index:-1;background:linear-gradient(180deg,rgba(15,15,15,.00) 0%,rgba(15,15,15,.03) 62%,#151515 100%)}
+    .hero{position:relative;min-height:0;padding:350px 20px 30px;display:block;isolation:isolate;background:#151515}
+    .hero:before{content:"";position:absolute;left:0;right:0;top:0;height:370px;z-index:-2;background-image:url("assets/site.jpg");background-repeat:no-repeat;background-size:275% auto;background-position:96% 0}
+    .hero:after{content:"";position:absolute;left:0;right:0;top:0;height:370px;z-index:-1;background:linear-gradient(90deg,#151515 0%,rgba(21,21,21,.88) 5%,rgba(21,21,21,.22) 17%,rgba(21,21,21,0) 30%),linear-gradient(180deg,rgba(15,15,15,0) 0%,rgba(15,15,15,.02) 68%,#151515 100%)}
     .brand{position:absolute;top:22px;left:20px;z-index:2;font-size:15px;letter-spacing:.18em;font-weight:700;text-shadow:0 2px 10px rgba(0,0,0,.55)}
     .hero-copy{position:relative;z-index:2;max-width:100%;padding-top:10px}
     .hero h1{text-shadow:0 2px 14px rgba(0,0,0,.55)}
@@ -101,7 +101,7 @@
     .status{display:none;margin-top:12px;color:#1d7f70;font-weight:700;font-size:14px}
     .footer{padding:12px 20px 34px;text-align:center;color:#777;font-size:11px}
     .honey{display:none!important}
-    @media(max-width:380px){.hero{padding-top:305px}.hero:before,.hero:after{height:325px}.hero:before{background-size:335% auto;background-position:110% 0}}
+    @media(max-width:380px){.hero{padding-top:325px}.hero:before,.hero:after{height:345px}.hero:before{background-size:290% auto;background-position:96% 0}}
     @media(min-width:521px){
       body{background:#0e0e0e}
       .page{box-shadow:0 0 80px rgba(0,0,0,.5)}
@@ -336,6 +336,6 @@
     history.replaceState(null,'',location.pathname+'#contact');
   }
 </script>
-<!-- build: mobile-hero-crop-v3 -->
+<!-- build: mobile-hero-centered-v4 -->
 </body>
 </html>
