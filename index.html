@@ -2,189 +2,338 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#171717">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,maximum-scale=1">
+  <meta name="theme-color" content="#151515">
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-  <meta http-equiv="Pragma" content="no-cache">
-  <meta http-equiv="Expires" content="0">
   <title>BodySlim41 — аппаратная коррекция фигуры</title>
-  <meta name="description" content="Аппаратная коррекция фигуры, обучение и оборудование BodySlim41">
+  <meta name="description" content="Обучение аппаратной коррекции фигуры BodySlim41">
   <style>
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth;background:#171717}
-    body{margin:0;background:#171717;color:#fff;font-family:Arial,sans-serif;overflow-x:hidden}
-    .site{width:100%;max-width:1800px;margin:0 auto;background:#171717}
-    .crop{position:relative;width:100%;overflow:hidden;line-height:0}
-    .crop img{position:absolute;left:0;top:0;width:100%;height:auto;display:block;border:0}
-    .top{aspect-ratio:1800/8630}
-    .bottom{aspect-ratio:1800/807}
-    .bottom img{transform:translateY(-92.124524251%)}
-    .hotspot{position:absolute;z-index:10;display:block;border:0;background:transparent;cursor:pointer;border-radius:12px}
-    .hotspot:focus-visible{outline:3px solid #fff;outline-offset:2px;background:rgba(255,255,255,.08)}
-    .training-choice{position:absolute;z-index:9;top:47.6491%;height:1.1636%;border-radius:12px;background:linear-gradient(90deg,#68c3b5 0%,#5db4a8 50%,#73c6ba 100%);display:flex;align-items:center;justify-content:center;color:#fff;font:400 clamp(11px,1.35vw,24px)/1 Arial,sans-serif;pointer-events:none;box-shadow:0 3px 7px rgba(77,190,174,.35)}
-    .training-choice.one{left:8.4%;width:26.4%}
-    .training-choice.two{left:36.9%;width:26.3%}
-    .training-choice.three{left:65.3%;width:26.3%}
-    .contact-field{position:absolute;z-index:30;left:56.72%;width:21.67%;height:6.70%;border:1.3px solid #222;border-radius:7px;background:#fff;color:#222;padding:0 1.35%;font:400 clamp(12px,1.05vw,19px)/1 Arial,sans-serif;outline:none}
-    .contact-field:focus{border-color:#47a99a;box-shadow:0 0 0 3px rgba(71,169,154,.16)}
-    .contact-phone{top:43.37%}
-    .contact-name{top:52.04%}
-    .contact-submit{position:absolute;z-index:30;left:56.72%;top:60.97%;width:17.17%;height:8.43%;border:0;border-radius:18px;background:linear-gradient(90deg,#5ab3a6,#78c5ba);color:#fff;font:400 clamp(12px,1.05vw,19px)/1 Arial,sans-serif;cursor:pointer}
-    .contact-submit:hover{filter:brightness(1.04)}
-    .social-hotspot{position:absolute;z-index:82;display:flex;align-items:center;justify-content:center;pointer-events:auto;text-decoration:none}
-    .social-vk{left:56.95%;top:72.15%;width:3.05%;height:6.85%;border-radius:50%;background:#4aa99a;color:#fff}
-    .social-inst{left:60.65%;top:72.15%;width:3.05%;height:6.85%;border-radius:50%;background:#4aa99a;color:#fff}
-    .social-max{left:64.35%;top:72.15%;width:3.05%;height:6.85%;border-radius:50%;background:#4aa99a;color:#fff;overflow:hidden}
-    .social-tap{left:68.15%;top:72.35%;width:10.8%;height:6.15%;border-radius:999px;background:#4aa99a;color:#fff;padding:0 1.2%;font:600 clamp(8px,.74vw,13px)/1 Arial,sans-serif;white-space:nowrap}
-    .social-max svg{width:72%;height:72%;display:block}
-    .social-icon{width:64%;height:64%;display:block}
-    .social-strip-bg{position:absolute;z-index:75;left:56.2%;top:70.6%;width:24.2%;height:10.4%;background:#fff;border-radius:8px}
-    .form-status{position:absolute;z-index:35;left:56.72%;top:82.5%;width:28%;color:#1d7f70;font:600 clamp(10px,.85vw,15px)/1.25 Arial,sans-serif;display:none}
-    .honey{display:none!important}
-    @media(max-width:700px){
-      .contact-field{font-size:9px;border-radius:3px;padding:0 1.3%}
-      .contact-submit{font-size:8px;border-radius:7px}
-      .social-tap{font-size:7px}
-      .form-status{font-size:7px}
+    :root{
+      --bg:#151515;
+      --card:#2e2e2e;
+      --card2:#252525;
+      --text:#fff;
+      --muted:#cfcfcf;
+      --accent:#62b9ad;
+      --accent2:#82cec4;
+      --line:rgba(98,185,173,.35);
     }
-
-    .faq{position:relative;z-index:50;background:#171717;padding:8.2% 12.8% 6.8%;pointer-events:auto}
-    .faq h2{margin:0 0 5.2%;text-align:center;font-family:Impact,"Arial Narrow",Arial,sans-serif;font-size:clamp(34px,5.3vw,88px);font-weight:900;line-height:1;text-transform:uppercase;letter-spacing:.01em}
-    .faq-list{display:flex;flex-direction:column;gap:18px}
-    .faq-item{position:relative;z-index:51;background:#343434;border-radius:11px;overflow:hidden;pointer-events:auto}
-    .faq-item summary{position:relative;z-index:52;display:flex;pointer-events:auto;align-items:center;min-height:96px;padding:24px 108px 24px 32px;list-style:none;cursor:pointer;font-size:clamp(16px,1.55vw,28px);line-height:1.35;color:#fff}
-    .faq-item summary::-webkit-details-marker{display:none}
-    .faq-item summary::after{content:"+";position:absolute;right:22px;top:50%;transform:translateY(-50%);display:flex;align-items:center;justify-content:center;width:64px;height:64px;border-radius:50%;background:#47a99a;color:#222;font-size:52px;font-weight:300;line-height:1}
-    .faq-item[open] summary::after{content:"−"}
-    .faq-answer{padding:0 32px 28px;font-size:clamp(15px,1.35vw,24px);line-height:1.55;color:#f3f3f3}
-    .faq-answer::before{content:"";display:block;height:1px;background:rgba(255,255,255,.12);margin:0 0 22px}
-    @media(max-width:700px){
-      .faq{padding:10% 6% 8%}
-      .faq h2{margin-bottom:7%;font-size:clamp(30px,8.8vw,50px)}
-      .faq-list{gap:10px}
-      .faq-item summary{min-height:68px;padding:16px 64px 16px 18px;font-size:14px}
-      .faq-item summary::after{right:12px;width:42px;height:42px;font-size:34px}
-      .faq-answer{padding:0 18px 18px;font-size:14px}
-      .faq-answer::before{margin-bottom:14px}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;background:var(--bg)}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif}
+    a{color:inherit}
+    button,input{font:inherit}
+    .page{width:100%;max-width:520px;margin:0 auto;overflow:hidden;background:
+      radial-gradient(circle at 100% 8%,rgba(55,145,131,.25),transparent 24%),
+      radial-gradient(circle at 0% 37%,rgba(55,145,131,.16),transparent 20%),
+      var(--bg)}
+    .section{padding:54px 20px}
+    .section.compact{padding-top:26px;padding-bottom:26px}
+    .kicker{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent2);margin-bottom:12px}
+    h1,h2,h3,p{margin-top:0}
+    h1,h2,.condensed{font-family:Impact,"Arial Narrow",Arial,sans-serif;text-transform:uppercase;letter-spacing:.01em}
+    h1{font-size:clamp(40px,12vw,64px);line-height:.98;margin-bottom:18px}
+    h2{font-size:clamp(34px,9.5vw,52px);line-height:1.02;margin-bottom:26px}
+    h3{font-size:22px;line-height:1.15;margin-bottom:12px}
+    p{font-size:16px;line-height:1.55;color:#ededed}
+    .muted{color:var(--muted)}
+    .accent{color:var(--accent2)}
+    .btn{display:flex;align-items:center;justify-content:center;width:100%;min-height:56px;border:0;border-radius:14px;padding:14px 18px;text-decoration:none;text-align:center;cursor:pointer;font-size:16px}
+    .btn.primary{background:linear-gradient(90deg,var(--accent),var(--accent2));color:#102321}
+    .btn.ghost{border:1px solid var(--accent);color:var(--accent2);background:rgba(0,0,0,.22)}
+    .btn + .btn{margin-top:10px}
+    .hero{position:relative;min-height:720px;padding:42px 20px 32px;display:flex;flex-direction:column;justify-content:flex-end;isolation:isolate}
+    .hero:before{content:"";position:absolute;inset:0;z-index:-2;background-image:url("assets/site.jpg");background-repeat:no-repeat;background-size:165% auto;background-position:63% 0}
+    .hero:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(15,15,15,.18) 0%,rgba(15,15,15,.42) 38%,#151515 82%)}
+    .brand{position:absolute;top:22px;left:20px;font-size:15px;letter-spacing:.18em;font-weight:700}
+    .hero-copy{max-width:460px}
+    .hero h1{text-shadow:0 2px 14px rgba(0,0,0,.55)}
+    .hero-sub{font-size:17px;line-height:1.45;margin-bottom:18px}
+    .mini-list{display:grid;gap:9px;margin:18px 0 24px}
+    .mini{display:flex;gap:10px;align-items:flex-start;font-size:14px;line-height:1.4}
+    .mini i,.check i{flex:0 0 24px;width:24px;height:24px;border:1px solid var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--accent2);font-style:normal}
+    .about-card,.card,.price-card,.faq-item,.contact-card{background:var(--card);border-radius:18px;border:1px solid rgba(255,255,255,.05)}
+    .about-card{padding:24px}
+    .signature{font-family:cursive;font-size:30px;margin-bottom:8px}
+    .about-card p:last-child{margin-bottom:0}
+    .stat-grid{display:grid;grid-template-columns:1fr;gap:12px}
+    .card{padding:22px}
+    .card .icon{width:48px;height:48px;border-radius:50%;background:rgba(98,185,173,.13);border:1px solid var(--accent);display:flex;align-items:center;justify-content:center;margin-bottom:14px;font-size:22px}
+    .card p:last-child{margin-bottom:0}
+    .three{display:grid;gap:12px}
+    .check{display:flex;gap:12px;align-items:flex-start;background:var(--card2);padding:16px;border-radius:14px}
+    .check span{font-size:15px;line-height:1.45}
+    .device-card{position:relative;overflow:hidden;border-radius:20px;background:linear-gradient(160deg,#252525,#19302c);padding:24px;border:1px solid var(--line)}
+    .device-card:after{content:"MS 676";position:absolute;right:-10px;bottom:-14px;font:72px/1 Impact,Arial,sans-serif;color:rgba(255,255,255,.035)}
+    .choice-row{display:grid;gap:10px}
+    .choice-row a{min-height:54px}
+    .program{display:grid;gap:10px;counter-reset:item}
+    .program div{display:flex;gap:12px;align-items:center;background:var(--card);padding:15px;border-radius:13px;font-size:15px}
+    .program div:before{counter-increment:item;content:counter(item);width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--accent);color:#102321;font-weight:700;flex:0 0 30px}
+    .price-stack{display:grid;gap:16px}
+    .price-card{padding:24px;scroll-margin-top:20px}
+    .price-card ul{padding-left:18px;margin:14px 0 20px}
+    .price-card li{margin:8px 0;color:#e8e8e8;font-size:14px;line-height:1.45}
+    .price{font-family:Impact,"Arial Narrow",Arial,sans-serif;font-size:34px;letter-spacing:.02em;margin:16px 0}
+    .price-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:14px 0}
+    .price-box{background:#202020;border-radius:12px;padding:13px;text-align:center}
+    .price-box b{display:block;font-size:20px;margin-top:6px}
+    .device-offer{background:linear-gradient(145deg,#303030,#1d2d2a);border:1px solid var(--line);border-radius:20px;padding:24px}
+    .device-offer .price{font-size:40px}
+    .faq-list{display:grid;gap:10px}
+    .faq-item{overflow:hidden}
+    .faq-q{width:100%;border:0;background:transparent;color:#fff;text-align:left;padding:18px 58px 18px 18px;position:relative;cursor:pointer;font-size:15px;line-height:1.4}
+    .faq-q:after{content:"+";position:absolute;right:14px;top:50%;transform:translateY(-50%);width:36px;height:36px;border-radius:50%;background:var(--accent);color:#17302d;display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:300}
+    .faq-item.open .faq-q:after{content:"−"}
+    .faq-a{display:none;padding:0 18px 18px;color:#ededed;font-size:14px;line-height:1.55}
+    .faq-item.open .faq-a{display:block}
+    .contact{padding-top:24px;padding-bottom:42px}
+    .contact-card{padding:24px;background:#f4f4f4;color:#171717}
+    .contact-card h2{color:#171717;font-size:40px;margin-bottom:8px}
+    .contact-card p{color:#444}
+    .field{width:100%;height:52px;border:1px solid #262626;border-radius:10px;background:#fff;padding:0 14px;margin-bottom:10px;font-size:16px}
+    .submit{width:100%;height:54px;border:0;border-radius:12px;background:linear-gradient(90deg,var(--accent),var(--accent2));color:#17302d;font-weight:700;font-size:16px;cursor:pointer}
+    .phone{display:block;margin-top:16px;color:#171717;text-decoration:none;font-weight:700}
+    .socials{display:flex;align-items:center;gap:10px;margin-top:18px;flex-wrap:wrap}
+    .social{width:44px;height:44px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;text-decoration:none;color:#fff}
+    .social svg{width:24px;height:24px}
+    .all-contacts{height:44px;padding:0 18px;border-radius:999px;background:var(--accent);display:flex;align-items:center;color:#fff;text-decoration:none;font-size:14px;font-weight:700}
+    .status{display:none;margin-top:12px;color:#1d7f70;font-weight:700;font-size:14px}
+    .footer{padding:12px 20px 34px;text-align:center;color:#777;font-size:11px}
+    .honey{display:none!important}
+    @media(min-width:521px){
+      body{background:#0e0e0e}
+      .page{box-shadow:0 0 80px rgba(0,0,0,.5)}
     }
   </style>
 </head>
 <body>
-  <main class="site">
-    <section class="crop top" aria-label="BodySlim41">
-      <img src="assets/site.jpg" alt="BodySlim41: аппаратная коррекция фигуры, обучение и оборудование">
-
-      <a class="hotspot" href="#pricing" aria-label="Узнать цену" style="left:14.2%;top:7.0174%;width:21.8%;height:1.4011%"></a>
-      <a class="hotspot" href="#equipment" aria-label="Подробнее об аппарате" style="left:36.6%;top:7.0174%;width:21.5%;height:1.4011%"></a>
-      <a class="hotspot" href="#contact" aria-label="Записаться на обучение" style="left:52.3%;top:17.6324%;width:21.7%;height:1.1874%"></a>
-
-      <div class="training-choice one" aria-hidden="true">Выстроить работу с 0</div>
-      <a class="hotspot" href="#work0" aria-label="Выстроить работу с 0" style="left:8.4%;top:47.6491%;width:26.4%;height:1.1636%"></a>
-
-      <div class="training-choice two" aria-hidden="true">Оффлайн обучение</div>
-      <a class="hotspot" href="#offline" aria-label="Оффлайн обучение" style="left:36.9%;top:47.6491%;width:26.3%;height:1.1636%"></a>
-
-      <div class="training-choice three" aria-hidden="true">Онлайн обучение</div>
-      <a class="hotspot" href="#online" aria-label="Онлайн обучение" style="left:65.3%;top:47.6491%;width:26.3%;height:1.1636%"></a>
-
-      <a class="hotspot" href="#contact" aria-label="Купить: как выстроить работу с 0" style="left:32%;top:72.2633%;width:36%;height:1.1636%"></a>
-      <a class="hotspot" href="#contact" aria-label="Купить онлайн обучение" style="left:31.9%;top:81.6198%;width:36.1%;height:1.1636%"></a>
-      <a class="hotspot" href="#contact" aria-label="Купить оффлайн обучение" style="left:32%;top:89.1833%;width:36%;height:1.1636%"></a>
-
-      <span id="work0" style="position:absolute;top:68%;left:0"></span>
-      <span id="online" style="position:absolute;top:78%;left:0"></span>
-      <span id="offline" style="position:absolute;top:86%;left:0"></span>
-      <span id="pricing" style="position:absolute;top:66%;left:0"></span>
-      <span id="equipment" style="position:absolute;top:93%;left:0"></span>
-    </section>
-
-    <section class="faq" id="faq">
-      <h2>Часто задаваемые вопросы</h2>
-      <div class="faq-list">
-        <details class="faq-item">
-          <summary>Нужна ли медицинская лицензия для оказания услуг?</summary>
-          <div class="faq-answer">Для представленных на сайте процедур медицинская лицензия не требуется.</div>
-        </details>
-
-        <details class="faq-item">
-          <summary>Как обслуживается оборудование в процессе эксплуатации?</summary>
-          <div class="faq-answer">По вопросам обслуживания и эксплуатации оборудования можно обратиться к нам. Подскажем по конкретной ситуации и поможем с рекомендациями по работе с аппаратом.</div>
-        </details>
-
-        <details class="faq-item">
-          <summary>Какая гарантия предоставляется на оборудование?</summary>
-          <div class="faq-answer">На аппарат предоставляется гарантия 1 год.</div>
-        </details>
-
-        <details class="faq-item">
-          <summary>Нужно ли регистрировать ИП/ООО для начала работы?</summary>
-          <div class="faq-answer">На первых этапах ничего открывать не нужно. Когда заработок станет стабильным, вы сможете выбрать подходящий для себя вариант оформления деятельности.</div>
-        </details>
+<main class="page">
+  <section class="hero" id="top">
+    <div class="brand">BODYSLIM41</div>
+    <div class="hero-copy">
+      <div class="kicker">Аппаратная коррекция фигуры</div>
+      <h1>Освой с нуля</h1>
+      <p class="hero-sub">Аппаратно-вакуумный массаж, ультразвуковая кавитация, RF-лифтинг тела и лица, микротоки для лица.</p>
+      <div class="mini-list">
+        <div class="mini"><i>✓</i><span>Не требуется медицинское образование</span></div>
+        <div class="mini"><i>✓</i><span>Можно начать работать сразу после обучения</span></div>
       </div>
-    </section>
+      <a class="btn primary" href="#prices">Узнать цену</a>
+      <a class="btn ghost" href="#device">Подробнее об аппарате</a>
+    </div>
+  </section>
 
-    <section class="crop bottom" id="contact" aria-label="Остались вопросы">
-      <img src="assets/site.jpg" alt="">
+  <section class="section">
+    <div class="kicker">Основатель BodySlim41</div>
+    <div class="about-card">
+      <div class="signature">Анастасия Ларченко</div>
+      <p><b>Основатель и руководитель студии BodySlim41.</b></p>
+      <p>Мой путь начался с весом в 82 кг, когда непринятие себя и своего тела стало моей реальностью. Дисциплина, питание, спорт и массаж помогли мне сбросить 30 кг и полностью изменить отношение к себе.</p>
+      <p>Я нашла свое призвание в помощи другим, создала авторскую программу и теперь делюсь опытом, чтобы вы тоже могли освоить новое направление и начать работать.</p>
+      <a class="btn primary" href="#contact">Записаться на обучение</a>
+    </div>
+  </section>
 
+  <section class="section compact">
+    <h2>Почему аппаратный массаж?</h2>
+    <div class="stat-grid">
+      <div class="card">
+        <div class="icon">⏱</div>
+        <h3>Высокая производительность</h3>
+        <p>Сеанс вакуумного массажа в среднем занимает 30–50 минут. Перерыв между сеансами — 10–15 минут.</p>
+      </div>
+      <div class="card">
+        <div class="icon">↗</div>
+        <h3>Быстрый видимый результат</h3>
+        <p>Сочетание вакуума и температурного воздействия помогает улучшать контуры тела уже после первых процедур.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section compact">
+    <h2>Станьте одним из первых в нише</h2>
+    <div class="three">
+      <div class="check"><i>✓</i><span>Вам не потребуется медицинское образование</span></div>
+      <div class="check"><i>✓</i><span>Начнете зарабатывать после 1 недели обучения</span></div>
+      <div class="check"><i>✓</i><span>Сможете окупить обучение спустя 1 месяц</span></div>
+    </div>
+  </section>
+
+  <section class="section compact">
+    <h2>Вы получите все необходимые знания</h2>
+    <div class="device-card">
+      <div class="three">
+        <div class="check"><i>✓</i><span>Подойдет даже тем, кто никогда не работал с аппаратами</span></div>
+        <div class="check"><i>✓</i><span>Сопровождение наставника в течение 6 месяцев</span></div>
+        <div class="check"><i>✓</i><span>Пошаговые инструкции и поддержка наставника</span></div>
+        <div class="check"><i>✓</i><span>Удостоверение государственного образца</span></div>
+        <div class="check"><i>✓</i><span>Практические советы по привлечению клиентов</span></div>
+        <div class="check"><i>✓</i><span>Теоретические и практические навыки</span></div>
+      </div>
+    </div>
+    <p style="margin:20px 0 18px">Всего за 3 дня вы освоите новую профессию, получите теоретические знания и практические навыки на реальных аппаратах.</p>
+    <div class="choice-row">
+      <a class="btn primary" href="#start">Выстроить работу с 0</a>
+      <a class="btn primary" href="#offline">Оффлайн обучение</a>
+      <a class="btn primary" href="#online">Онлайн обучение</a>
+    </div>
+  </section>
+
+  <section class="section compact">
+    <h2>Программа обучения</h2>
+    <div class="program">
+      <div>Аппаратно-вакуумный массаж</div>
+      <div>Ультразвуковая кавитация</div>
+      <div>RF-лифтинг тела</div>
+      <div>RF-лифтинг лица</div>
+      <div>Микротоки для лица</div>
+    </div>
+  </section>
+
+  <section class="section" id="prices">
+    <h2>Варианты обучения</h2>
+    <div class="price-stack">
+      <article class="price-card" id="start">
+        <div class="kicker">Для старта</div>
+        <h3 class="condensed">Как выстроить работу с 0</h3>
+        <ul>
+          <li>Финансовая таблица</li>
+          <li>CRM-система</li>
+          <li>Скрипт общения в Директ</li>
+          <li>Работа с возражениями</li>
+          <li>Анкета для мастера</li>
+          <li>Договоры и документы для работы</li>
+          <li>Вопросы для оценки кандидатов</li>
+        </ul>
+        <div class="price">10 000 руб</div>
+        <a class="btn primary buy" href="#contact" data-interest="Как выстроить работу с 0">Купить</a>
+      </article>
+
+      <article class="price-card" id="online">
+        <div class="kicker">В удобном темпе</div>
+        <h3 class="condensed">Онлайн обучение</h3>
+        <ul>
+          <li>Доступ к онлайн-урокам 6 месяцев</li>
+          <li>Обратная связь от меня лично 6 месяцев</li>
+          <li>Контакты для покупки аппарата</li>
+          <li>Удостоверение гос. образца</li>
+        </ul>
+        <div class="muted">С аппаратом</div>
+        <div class="price-grid">
+          <div class="price-box">Групповое<b>100 000 ₽</b></div>
+          <div class="price-box">Индивидуальное<b>70 000 ₽</b></div>
+        </div>
+        <div class="muted">Без аппарата</div>
+        <div class="price-grid">
+          <div class="price-box">Групповое<b>40 000 ₽</b></div>
+          <div class="price-box">Индивидуальное<b>60 000 ₽</b></div>
+        </div>
+        <a class="btn primary buy" href="#contact" data-interest="Онлайн обучение">Купить</a>
+      </article>
+
+      <article class="price-card" id="offline">
+        <div class="kicker">5 дней</div>
+        <h3 class="condensed">Оффлайн обучение</h3>
+        <ul>
+          <li>2 дня теории и 3 дня практики</li>
+          <li>Отработка каждой процедуры на модели</li>
+          <li>Доступ к онлайн-урокам 6 месяцев</li>
+          <li>Обратная связь 6 месяцев</li>
+          <li>Упаковка аккаунта и рекомендации по продвижению</li>
+          <li>Удостоверение гос. образца</li>
+          <li>Памятка для клиентов и рабочая тетрадь со схемами</li>
+        </ul>
+        <div class="muted">С аппаратом</div>
+        <div class="price">120 000 руб</div>
+        <a class="btn primary buy" href="#contact" data-interest="Оффлайн обучение">Купить</a>
+      </article>
+    </div>
+  </section>
+
+  <section class="section compact" id="device">
+    <h2>Аппарат MS 676</h2>
+    <div class="device-offer">
+      <p>Полный комплект документов и сертификатов, гарантирующих качество оборудования.</p>
+      <div class="check"><i>✓</i><span>Гарантия 1 год</span></div>
+      <div class="price">65 000 руб</div>
+      <a class="btn primary buy" href="#contact" data-interest="Аппарат MS 676">Узнать подробнее</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Часто задаваемые вопросы</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" type="button">Нужна ли медицинская лицензия для оказания услуг?</button>
+        <div class="faq-a">Для представленных на сайте процедур медицинская лицензия не требуется.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button">Как обслуживается оборудование в процессе эксплуатации?</button>
+        <div class="faq-a">По вопросам обслуживания и эксплуатации оборудования можно обратиться к нам. Подскажем по конкретной ситуации и поможем с рекомендациями по работе с аппаратом.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button">Какая гарантия предоставляется на оборудование?</button>
+        <div class="faq-a">На аппарат предоставляется гарантия 1 год.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button">Нужно ли регистрировать ИП/ООО для начала работы?</button>
+        <div class="faq-a">На первых этапах ничего открывать не нужно. Когда заработок станет стабильным, вы сможете выбрать подходящий для себя вариант оформления деятельности.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section contact" id="contact">
+    <div class="contact-card">
+      <div class="kicker">BodySlim41</div>
+      <h2>Остались вопросы?</h2>
+      <p>Заполни форму, и я свяжусь с тобой.</p>
       <form action="https://formsubmit.co/Sefanesti@mail.ru" method="POST">
-        <input class="contact-field contact-phone" type="tel" name="Телефон" inputmode="tel" autocomplete="tel" placeholder="Телефон" required aria-label="Телефон">
-        <input class="contact-field contact-name" type="text" name="Имя" autocomplete="name" placeholder="Имя" required aria-label="Имя">
+        <input class="field" type="tel" name="Телефон" inputmode="tel" autocomplete="tel" placeholder="Телефон" required>
+        <input class="field" type="text" name="Имя" autocomplete="name" placeholder="Имя" required>
+        <input id="interest" type="hidden" name="Что интересует" value="Обучение BodySlim41">
         <input class="honey" type="text" name="_honey" tabindex="-1" autocomplete="off">
         <input type="hidden" name="_subject" value="Новая заявка с сайта BodySlim41">
         <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_url" value="https://bodyslim41.github.io/">
         <input type="hidden" name="_next" value="https://bodyslim41.github.io/?sent=1#contact">
-        <button class="contact-submit" type="submit">Свяжись со мной</button>
+        <button class="submit" type="submit">Свяжись со мной</button>
       </form>
+      <div class="status" id="status">Спасибо! Заявка отправлена. Я свяжусь с вами в ближайшее время.</div>
+      <a class="phone" href="tel:+79149930556">8 914 993-05-56</a>
+      <div class="socials">
+        <a class="social" href="https://vk.com/bodyslim41" target="_blank" rel="noopener" aria-label="ВКонтакте">
+          <svg viewBox="0 0 64 64" aria-hidden="true"><path fill="#fff" d="M9 18h10c1 0 2 .8 2.4 1.8 2.2 6.3 5.1 11.1 8.6 14.7V20c0-1.1.9-2 2-2h8c1.1 0 2 .9 2 2v9.5c3.3-3.5 5.9-7.6 7.9-11.2.4-.8 1.2-1.3 2.1-1.3h9c1.8 0 2.8 2 1.8 3.5-3.8 5.6-7.2 9.8-11 13.8 4.1 3.7 7.6 7.9 11.1 12.4 1.1 1.5.1 3.6-1.8 3.6h-9.7c-1 0-1.8-.4-2.4-1.2-2.5-3.2-4.6-5.9-7-8.2V49c0 1.1-.9 2-2 2h-3.8C24.5 51 12.8 44.5 7 21.1 6.6 19.5 7.5 18 9 18z"/></svg>
+        </a>
+        <a class="social" href="https://instagram.com/bodyslim41" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 64 64" aria-hidden="true"><rect x="13" y="13" width="38" height="38" rx="12" fill="none" stroke="#fff" stroke-width="5"/><circle cx="32" cy="32" r="9" fill="none" stroke="#fff" stroke-width="5"/><circle cx="44" cy="20" r="3.2" fill="#fff"/></svg>
+        </a>
+        <a class="social" href="https://max.ru/u/f9LHodD0cOIGw9lbWW_g12sH9MClAGbIqInTsvOMEqlTA7-R7Uguk-K3uok" target="_blank" rel="noopener" aria-label="MAX">
+          <svg viewBox="0 0 100 100" aria-hidden="true"><path fill="#fff" d="M74 20c-6-5-14-8-22-8-22 0-40 17-40 39 0 8 2 15 4 27l1 7c0 2 2 3 4 3 5 0 9-2 13-6 6 4 11 6 18 6 20 0 36-16 36-37 0-12-5-23-14-31zm-12 45c-4 3-8 4-12 4-5 0-8-1-11-3-4 3-6 4-8 4-1-2-2-5-2-8-1-4-1-8-1-11 0-12 9-21 21-21 12 0 21 9 21 21 0 6-3 11-8 14z"/></svg>
+        </a>
+        <a class="all-contacts" href="https://taplink.cc/bodyslim" target="_blank" rel="noopener">Все контакты</a>
+      </div>
+    </div>
+  </section>
 
-      <div class="social-strip-bg" aria-hidden="true"></div>
+  <div class="footer">BODYSLIM41</div>
+</main>
 
-      <a class="social-hotspot social-vk" href="https://vk.com/bodyslim41" target="_blank" rel="noopener noreferrer" aria-label="BodySlim41 во ВКонтакте">
-        <svg class="social-icon" viewBox="0 0 64 64" aria-hidden="true">
-          <path fill="#fff" d="M9 18h10c1 0 2 .8 2.4 1.8 2.2 6.3 5.1 11.1 8.6 14.7V20c0-1.1.9-2 2-2h8c1.1 0 2 .9 2 2v9.5c3.3-3.5 5.9-7.6 7.9-11.2.4-.8 1.2-1.3 2.1-1.3h9c1.8 0 2.8 2 1.8 3.5-3.8 5.6-7.2 9.8-11 13.8 4.1 3.7 7.6 7.9 11.1 12.4 1.1 1.5.1 3.6-1.8 3.6h-9.7c-1 0-1.8-.4-2.4-1.2-2.5-3.2-4.6-5.9-7-8.2V49c0 1.1-.9 2-2 2h-3.8C24.5 51 12.8 44.5 7 21.1 6.6 19.5 7.5 18 9 18z"/>
-        </svg>
-      </a>
-
-      <a class="social-hotspot social-inst" href="https://instagram.com/bodyslim41" target="_blank" rel="noopener noreferrer" aria-label="BodySlim41 в Instagram">
-        <svg class="social-icon" viewBox="0 0 64 64" aria-hidden="true">
-          <rect x="13" y="13" width="38" height="38" rx="12" fill="none" stroke="#fff" stroke-width="5"/>
-          <circle cx="32" cy="32" r="9" fill="none" stroke="#fff" stroke-width="5"/>
-          <circle cx="44" cy="20" r="3.2" fill="#fff"/>
-        </svg>
-      </a>
-
-      <a class="social-hotspot social-max" href="https://max.ru/u/f9LHodD0cOIGw9lbWW_g12sH9MClAGbIqInTsvOMEqlTA7-R7Uguk-K3uok" target="_blank" rel="noopener noreferrer" aria-label="BodySlim41 в MAX">
-        <svg viewBox="0 0 100 100" aria-hidden="true" focusable="false">
-          <path fill="#fff" fill-rule="evenodd" d="M 73.93,20.12 L 68.16,16.31 L 63.87,14.36 L 60.55,13.28 L 56.45,12.40 L 52.83,12.01 L 46.00,12.21 L 38.28,13.87 L 31.84,16.60 L 25.78,20.61 L 20.41,25.88 L 16.89,30.86 L 14.45,35.84 L 12.70,41.50 L 11.82,48.24 L 11.91,54.20 L 12.79,61.52 L 16.70,77.73 L 17.38,85.16 L 17.87,86.33 L 18.65,87.11 L 20.80,87.89 L 23.63,87.79 L 25.98,87.21 L 30.66,84.96 L 33.69,82.23 L 39.84,85.94 L 43.95,87.21 L 48.44,87.70 L 52.44,87.70 L 58.89,86.82 L 65.23,84.77 L 71.09,81.64 L 75.88,77.93 L 79.98,73.54 L 83.59,68.07 L 85.55,63.87 L 86.91,59.67 L 87.99,53.32 L 87.89,45.80 L 86.52,38.96 L 85.06,34.86 L 83.30,31.25 L 81.15,27.83 L 78.71,24.71 Z
-          M 61.82,34.47 L 64.75,37.21 L 66.99,40.33 L 68.75,44.34 L 69.53,48.24 L 69.53,51.76 L 68.75,55.47 L 67.09,59.28 L 65.04,62.21 L 62.60,64.65 L 60.16,66.41 L 57.91,67.58 L 54.39,68.75 L 50.68,69.24 L 46.97,68.95 L 43.16,67.77 L 39.75,65.92 L 36.23,68.85 L 34.96,69.43 L 33.98,69.24 L 32.52,66.89 L 31.25,62.21 L 30.57,56.45 L 30.57,51.76 L 30.96,48.14 L 32.23,43.36 L 33.50,40.53 L 35.64,37.30 L 37.89,34.96 L 40.72,32.91 L 44.24,31.35 L 48.05,30.57 L 51.76,30.57 L 55.08,31.15 L 57.62,32.03 Z"/>
-        </svg>
-      </a>
-
-      <a class="social-hotspot social-tap" href="https://taplink.cc/bodyslim" target="_blank" rel="noopener noreferrer" aria-label="Все контакты BodySlim41">Все контакты</a>
-
-      <div class="form-status" id="formStatus">Спасибо! Заявка отправлена. Я свяжусь с вами в ближайшее время.</div>
-    </section>
-  </main>
-  <script>
-    // faq-click-fallback
-    document.querySelectorAll('.faq-item > summary').forEach(summary => {
-      summary.addEventListener('click', e => {
-        e.preventDefault();
-        const details = summary.parentElement;
-        details.open = !details.open;
-      });
+<script>
+  document.querySelectorAll('.faq-q').forEach(btn=>{
+    btn.addEventListener('click',()=>btn.parentElement.classList.toggle('open'));
+  });
+  document.querySelectorAll('.buy').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      const field=document.getElementById('interest');
+      if(field && btn.dataset.interest) field.value=btn.dataset.interest;
     });
-
-    (() => {
-      const params = new URLSearchParams(location.search);
-      if (params.get('sent') === '1') {
-        const status = document.getElementById('formStatus');
-        if (status) status.style.display = 'block';
-        history.replaceState(null, '', location.pathname + '#contact');
-      }
-    })();
-  </script>
-
-<!-- build: unified-three-training-buttons-v1 -->
+  });
+  const params=new URLSearchParams(location.search);
+  if(params.get('sent')==='1'){
+    const status=document.getElementById('status');
+    if(status) status.style.display='block';
+    history.replaceState(null,'',location.pathname+'#contact');
+  }
+</script>
 </body>
 </html>
