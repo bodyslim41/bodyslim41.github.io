@@ -224,6 +224,62 @@ var(--bg);overflow:hidden}
     }
 
 </style>
+
+/* POSITION-FIX-START */
+<style>
+/* Блок Анастасии: вместо длинного узкого портрета делаем аккуратный широкий кадр.
+   Смещаем фокус вправо, чтобы полностью убрать старые подписи и кнопки слева. */
+.founder-wrap{
+  overflow:hidden !important;
+}
+.founder-photo{
+  width:100% !important;
+  height:560px !important;
+  max-height:none !important;
+  display:block !important;
+  margin:0 auto 14px !important;
+  padding:0 !important;
+  object-fit:cover !important;
+  object-position:78% 19% !important;
+  border-radius:12px !important;
+  filter:none !important;
+}
+
+/* Нижняя форма: убираем огромный белый воздух над Настей.
+   Фото становится широким баннером и плавно переходит в белую форму. */
+.contact-card{
+  padding-top:285px !important;
+}
+.contact-photo{
+  position:absolute !important;
+  left:0 !important;
+  right:0 !important;
+  top:0 !important;
+  transform:none !important;
+  width:100% !important;
+  height:285px !important;
+  max-height:none !important;
+  margin:0 !important;
+  padding:0 !important;
+  object-fit:cover !important;
+  object-position:66% 31% !important;
+  background:#fff !important;
+  border-radius:0 !important;
+}
+@media(max-width:380px){
+  .founder-photo{
+    height:500px !important;
+    object-position:78% 18% !important;
+  }
+  .contact-card{padding-top:250px !important}
+  .contact-photo{
+    height:250px !important;
+    object-position:66% 30% !important;
+  }
+}
+</style>
+/* POSITION-FIX-END */
+
 </head>
 <body>
 <main class="page">
